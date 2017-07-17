@@ -2,6 +2,7 @@
 $white: #fff;
 $gray: #eee;
 $darkgray: #aaa;
+$bluetext: #4488bb;
 
 body{
 	font-family: Arial;
@@ -18,18 +19,21 @@ body{
 	font-size: 16px;
 }
 
-.overlay {
+@mixin overlay{
 	height: 100%;
 	width: 100%;
-	background-color: rgba(148, 181, 208, .8);
+	//background-color: rgba(148, 181, 208, .8);
+	background-color: rgba(68, 136, 187, .5);
 }
+
+
 
 h1{
 	color: $white;
 	font-size: 32px;
 	line-height: 32px;
 	font-weight: 700;
-	padding-top: 16px;
+	padding-top: 37px;
 
 	&:first-letter{
 		text-transform: capitalize;
@@ -41,18 +45,13 @@ h2{
 	font-size: 24px;
 	font-weight: 700;
 	padding-top: 19px;
-	padding-left: 8px;
+	padding-left: 18px;
 
 	&:first-letter{
 		text-transform: capitalize;
 	}
 }
 
-.wrap{
-	padding-left: 10px;
-	padding-right: 10px;
-
-}
 
 .card{
 	background-image: url('../img/card.jpg');
@@ -60,14 +59,19 @@ h2{
 	background-repeat: no-repeat;
 	position: relative;
 	width: 100%;
-	overflow: auto;
-	height: 710px;
+
+	.overlay {
+		@include overlay;
+		padding-bottom: 20px;
+
+	}
+
+
 }
 
 .wrapper{
 	width: 100%;
 	margin: auto;
-	position: absolute;
 	top: 0;
 	left: 0;
 	padding-right: 10px;
@@ -97,7 +101,10 @@ h2{
 		border-radius: 5px;
 		box-shadow:1px 0px 15px rgba(0, 0, 0, 0.06);
 		-webkit-box-shadow:1px 0px 15px rgba(0, 0, 0, 0.06);
+		padding-bottom: 22px;
 		form{
+			margin-top: 12px;
+
 			input[type=text]{
 				background-color: $gray;
 				display: block;
@@ -110,8 +117,9 @@ h2{
 				width: 280px;
 				background-color: $gray;
 				color: $darkgray;
-
+				border: 1px solid $darkgray;
 			}
+
 			option{
 				color: $darkgray;
 			}
@@ -121,11 +129,17 @@ h2{
 				width: 125px;
 				border: 0;
 				color: $white;
+				margin-top: 17px;
+				margin-left: 11px;
 			}
 			input[placeholder]{
 				color: $darkgray;
 			}
 
+			input[type="checkbox"]{
+				margin-top: 17px;
+				margin-left: 12px;
+			}
 			select{
 
 			}
@@ -135,6 +149,7 @@ h2{
 		a{
 			color: $darkgray;
 			text-decoration: none;
+			padding-left: 48px;
 		}
 		p{
 			display: inline-block;
@@ -146,8 +161,18 @@ h2{
 		}
 	}
 	.post{
-		margin: 10px 0;
+		margin: 20px 0;
 		height: 170px;
+
+
+		.overlay{
+			@include overlay;
+		}
+
+
+		h2{
+			padding-left: 4px;
+		}
 		&:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4), &:last-child{
 			@include square;
 		}
@@ -165,6 +190,7 @@ h2{
 		}
 		&:last-child{
 			background-image: url('../img/books.jpg');
+			z-index: 1000;
 		}
 
 		.textblock{
@@ -186,8 +212,6 @@ h2{
 				font-size: 24px;
 				font-weight: 700;
 				line-height: 24px;
-				margin-top: 0;
-				margin-bottom: 0;
 				padding-top: 0;
 				position: relative;
 
@@ -197,17 +221,101 @@ h2{
 				font-size: 14px;
 				line-height: 18px;
 				color: $white;
+				margin-top: 13px;
 			}
-
-
 		}
 	}
-
 }
 
 .posts{
 	background-color: $white;
 	position: relative;
+	margin-bottom: -110px;
+}
+
+
+.description{
+	width: 100%;
+	background-color: $gray;
+	display: flex;
+	flex-direction: column;
+	z-index: 100;
+	position: absolute;
+	
+	.desktop{
+		display: none;
+	}
+	
+	.desktop-text{
+		h2{
+			display: none;
+		}
+		ul{
+			list-style: none;
+			padding-top: 65px;
+			counter-reset: list 0;
+
+			li{
+				color: $bluetext;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 25px;
+				border-bottom: 1px dashed $darkgray;
+				margin-left: 20px;
+				margin-right: 10px;
+				margin-top: 16px;
+				margin-bottom: 20px;
+
+				&:before{
+					content: counter(list);
+					width: 30px;
+					height: 30px;
+					background-color: $bluetext;
+					border-radius: 50%;
+					position: absolute;
+					margin-left: -50px;
+					margin-top: 4%;
+					counter-increment: list;
+					color: $white;
+					line-height: 30px;
+					text-align: center;
+
+				}
+			}
+
+		}
+	}
+}
+
+.definitions{
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	top: 548px;
+	padding: 20px 10px;
+
+	.border-blue{
+		width: 5px;
+		height: 322px;
+		background-color: $bluetext;
+
+	}
+
+	.define{
+		padding-left: 15px;
+
+		p{
+			color: $bluetext;
+			font-size: 18px;
+			font-weight: 400;
+			padding-top: 8px;
+			padding-bottom: 8px;
+
+			sup{
+
+			}
+		}
+	}
 }
 
 

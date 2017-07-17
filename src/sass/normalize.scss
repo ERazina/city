@@ -319,7 +319,9 @@ button::-moz-focus-inner,
 /**
  * Restore the focus styles unset by the previous rule.
  */
-
+h1, h2, h3, h4, h5, h6, p{
+  margin:0;
+}
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
