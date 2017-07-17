@@ -1,0 +1,239 @@
+body {
+  font-family: Arial; }
+
+h1 {
+  color: #fff;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+  padding-top: 37px; }
+  h1:first-letter {
+    text-transform: capitalize; }
+
+h2 {
+  color: #4488bb;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 19px;
+  padding-left: 18px; }
+  h2:first-letter {
+    text-transform: capitalize; }
+
+.card {
+  background-image: url("../img/card.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%; }
+  .card .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(68, 136, 187, 0.5);
+    padding-bottom: 20px; }
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .wrapper .border {
+    height: 5px;
+    background-color: #fff;
+    margin-top: 26px; }
+  .wrapper .text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 25px;
+    padding-right: 44px; }
+  .wrapper .form {
+    background-color: #fff;
+    width: 100%;
+    margin-top: 26px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.06);
+    padding-bottom: 22px;
+    max-width: 300px;
+    margin: auto; }
+    .wrapper .form form {
+      margin-top: 12px; }
+      .wrapper .form form input[type=text] {
+        background-color: #eee;
+        display: block;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        margin: 10px;
+        padding: 6px 0 4px 10px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
+      .wrapper .form form input[type=text], .wrapper .form form select {
+        font-size: 16px;
+        height: 50px;
+        width: 280px;
+        background-color: #eee;
+        color: #aaa;
+        border: 1px solid #aaa; }
+      .wrapper .form form option {
+        color: #aaa; }
+      .wrapper .form form input[type=submit] {
+        background: -webkit-gradient(linear, left bottom, left top, from(#316489), to(#4386b9));
+        background: -webkit-linear-gradient(bottom, #316489, #4386b9);
+        background: -o-linear-gradient(bottom, #316489, #4386b9);
+        background: linear-gradient(to top, #316489, #4386b9);
+        height: 30px;
+        width: 125px;
+        border: 0;
+        color: #fff;
+        margin-top: 17px;
+        margin-left: 11px; }
+      .wrapper .form form input[placeholder] {
+        color: #aaa; }
+      .wrapper .form form input[type="checkbox"] {
+        margin-top: 17px;
+        margin-left: 12px; }
+    .wrapper .form a {
+      color: #aaa;
+      text-decoration: none;
+      padding-left: 48px; }
+    .wrapper .form p {
+      display: inline-block;
+      padding-left: 10px;
+      color: #aaa;
+      margin-top: 0;
+      margin-bottom: 0; }
+  .wrapper .post {
+    margin: 20px 0;
+    height: 170px; }
+    .wrapper .post .overlay {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(68, 136, 187, 0.5); }
+    .wrapper .post h2 {
+      padding-left: 4px; }
+    .wrapper .post:first-child, .wrapper .post:nth-child(2), .wrapper .post:nth-child(3), .wrapper .post:nth-child(4), .wrapper .post:last-child {
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      width: 100%; }
+    .wrapper .post:first-child {
+      background-image: url("../img/arm.jpg"); }
+    .wrapper .post:nth-child(2) {
+      background-image: url("../img/NatWest.jpg"); }
+    .wrapper .post:nth-child(3) {
+      background-image: url("../img/mastercard.jpg"); }
+    .wrapper .post:nth-child(4) {
+      background-image: url("../img/watch.jpg"); }
+    .wrapper .post:last-child {
+      background-image: url("../img/books.jpg");
+      z-index: 1000; }
+    .wrapper .post .textblock {
+      position: absolute;
+      top: 0;
+      margin: 10px 13px 17px 20px; }
+      .wrapper .post .textblock::after {
+        content: "";
+        background-image: url(../img/icon.png);
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 0;
+        right: 0; }
+      .wrapper .post .textblock .post-header {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        padding-top: 0;
+        position: relative; }
+      .wrapper .post .textblock .post-text {
+        font-size: 14px;
+        line-height: 18px;
+        color: #fff;
+        margin-top: 13px; }
+
+.posts {
+  background-color: #fff;
+  position: relative;
+  margin-bottom: -110px; }
+
+.description {
+  width: 100%;
+  background-color: #eee;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 100;
+  position: absolute; }
+  .description .desktop {
+    display: none; }
+  .description .desktop-text h2 {
+    display: none; }
+  .description .desktop-text ul {
+    list-style: none;
+    padding-top: 65px;
+    counter-reset: list 0; }
+    .description .desktop-text ul li {
+      color: #4488bb;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      border-bottom: 1px dashed #aaa;
+      margin-left: 20px;
+      margin-right: 10px;
+      margin-top: 16px;
+      margin-bottom: 20px; }
+      .description .desktop-text ul li:before {
+        content: counter(list);
+        width: 30px;
+        height: 30px;
+        background-color: #4488bb;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: -50px;
+        margin-top: 0;
+        counter-increment: list;
+        color: #fff;
+        line-height: 30px;
+        text-align: center; }
+
+.definitions {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  top: 548px;
+  padding: 20px 10px; }
+  .definitions .border-blue {
+    width: 5px;
+    height: 322px;
+    background-color: #4488bb; }
+  .definitions .define {
+    padding-left: 15px; }
+    .definitions .define p {
+      color: #4488bb;
+      font-size: 18px;
+      font-weight: 400;
+      padding-top: 8px;
+      padding-bottom: 8px; }
