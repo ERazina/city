@@ -1,0 +1,214 @@
+// colors
+$white: #fff;
+$gray: #eee;
+$darkgray: #aaa;
+
+body{
+	font-family: Arial;
+}
+
+@mixin square{
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 100%;
+}
+
+@mixin sixteen{
+	font-size: 16px;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(148, 181, 208, .8);
+}
+
+h1{
+	color: $white;
+	font-size: 32px;
+	line-height: 32px;
+	font-weight: 700;
+	padding-top: 16px;
+
+	&:first-letter{
+		text-transform: capitalize;
+	}
+}
+
+h2{
+	color: #4488bb;
+	font-size: 24px;
+	font-weight: 700;
+	padding-top: 19px;
+	padding-left: 8px;
+
+	&:first-letter{
+		text-transform: capitalize;
+	}
+}
+
+.wrap{
+	padding-left: 10px;
+	padding-right: 10px;
+
+}
+
+.card{
+	background-image: url('../img/card.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 100%;
+	overflow: auto;
+	height: 710px;
+}
+
+.wrapper{
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-right: 10px;
+	padding-left: 10px;
+	box-sizing: border-box;
+
+
+	.border{
+		height: 5px;
+		background-color: $white;
+		margin-top: 26px;
+	}
+
+	.text{
+		color: $white;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 24px;
+		padding-top: 25px;
+		padding-right: 44px;
+	}
+
+	.form{
+		background-color: $white;
+		width: 100%;
+		margin-top: 26px;
+		border-radius: 5px;
+		box-shadow:1px 0px 15px rgba(0, 0, 0, 0.06);
+		-webkit-box-shadow:1px 0px 15px rgba(0, 0, 0, 0.06);
+		form{
+			input[type=text]{
+				background-color: $gray;
+				display: block;
+				border-radius: 3px;
+				margin: 10px;
+			}
+			input[type=text], select{
+				@include sixteen;
+				height: 50px;
+				width: 280px;
+				background-color: $gray;
+				color: $darkgray;
+
+			}
+			option{
+				color: $darkgray;
+			}
+			input[type=submit]{
+				background: linear-gradient(to top, #316489, #4386b9);
+				height: 30px;
+				width: 125px;
+				border: 0;
+				color: $white;
+			}
+			input[placeholder]{
+				color: $darkgray;
+			}
+
+			select{
+
+			}
+
+		}
+
+		a{
+			color: $darkgray;
+			text-decoration: none;
+		}
+		p{
+			display: inline-block;
+			padding-left: 10px;
+			color: $darkgray;
+			margin-top: 0;
+			margin-bottom: 0;
+
+		}
+	}
+	.post{
+		margin: 10px 0;
+		height: 170px;
+		&:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4), &:last-child{
+			@include square;
+		}
+		&:first-child{
+			background-image: url('../img/arm.jpg');
+		}
+		&:nth-child(2){
+			background-image: url('../img/NatWest.jpg');
+		}
+		&:nth-child(3){
+			background-image: url('../img/mastercard.jpg');
+		}
+		&:nth-child(4){
+			background-image: url('../img/watch.jpg');
+		}
+		&:last-child{
+			background-image: url('../img/books.jpg');
+		}
+
+		.textblock{
+			position: absolute;
+			top: 0;
+			margin: 10px 13px 17px 20px;
+			&::after{
+				content: "";
+				background-image: url(../img/icon.png);
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+
+			.post-header{
+				color: $white;
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 24px;
+				margin-top: 0;
+				margin-bottom: 0;
+				padding-top: 0;
+				position: relative;
+
+			}
+
+			.post-text{
+				font-size: 14px;
+				line-height: 18px;
+				color: $white;
+			}
+
+
+		}
+	}
+
+}
+
+.posts{
+	background-color: $white;
+	position: relative;
+}
+
+
+
