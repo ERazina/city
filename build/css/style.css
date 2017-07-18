@@ -115,7 +115,7 @@ h2 {
   background-color: #fff;
   position: relative;
   margin-bottom: -118px;
-  margin-top: 20px; }
+  margin-top: 10px; }
   .posts .second-block {
     display: -webkit-box;
     display: -webkit-flex;
@@ -146,8 +146,7 @@ h2 {
         position: relative;
         width: 100%; }
       .posts .second-block .post:first-child {
-        background-image: url("../img/arm.jpg");
-        margin-top: 0; }
+        background-image: url("../img/arm.jpg"); }
       .posts .second-block .post:nth-child(2) {
         background-image: url("../img/NatWest.jpg"); }
       .posts .second-block .post:nth-child(3) {
@@ -202,7 +201,7 @@ h2 {
     display: none; }
   .description .desktop-text ul {
     list-style: none;
-    padding-top: 80px;
+    padding-top: 90px;
     counter-reset: list 0;
     margin-bottom: 0; }
     .description .desktop-text ul li {

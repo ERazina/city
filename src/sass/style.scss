@@ -170,7 +170,7 @@ h2{
 		background-color: $white;
 		position: relative;
 		margin-bottom: -118px;
-		margin-top: 20px;
+		margin-top: 10px;
 
 		.second-block {
 			display: flex;
@@ -194,7 +194,6 @@ h2{
 				}
 				&:first-child {
 					background-image: url('../img/arm.jpg');
-					margin-top: 0;
 				}
 				&:nth-child(2) {
 					background-image: url('../img/NatWest.jpg');
@@ -270,7 +269,7 @@ h2{
 		}
 		ul{
 			list-style: none;
-			padding-top: 80px;
+			padding-top: 90px;
 			counter-reset: list 0;
 			margin-bottom: 0;
 
