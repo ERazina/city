@@ -1,0 +1,72 @@
+$white: #fff;
+$gray: #eee;
+$darkgray: #aaa;
+$bluetext: #4488bb;
+
+@media screen and (min-width: 768px) {
+  body {
+
+    .card {
+      background-image: url('../img/big-card.jpg');
+    }
+
+    .wrapper {
+      overflow: auto;
+      padding-top: 30px;
+
+      .banner-text {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+
+        .header {
+          border-bottom: 5px solid #fff;
+          display: inline-block;
+          padding-bottom: 29px;
+
+          h1 {
+            font-size: 48px;
+            padding-top: 0;
+          }
+
+        }
+        .border {
+          display: none;
+        }
+      }
+      .form {
+        width: 50%;
+        display: inline-block;
+        float: right;
+        margin-right: 20px;
+      }
+
+    }
+
+    .posts {
+      .wrapper.second-block {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .post {
+          margin: 10px;
+          width: 33%;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px)  {
+  body{
+    .wrap {
+      max-width: 1190px;
+      margin: auto;
+    }
+  }
+}
+//@media screen and (min-width: 600px)  {...}
+//@media screen and (min-width: 1000px) {...}
+//@media screen and (min-width: 1400px) {...}

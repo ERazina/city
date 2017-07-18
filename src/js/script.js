@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	function validate(){
+
 		$('input#name, input#email').unbind().blur( function(){
 			var id = $(this).attr('id');
 			var val = $(this).val();
@@ -27,6 +28,9 @@ $(document).ready(function(){
 		});
 	}
 
-	validate();
+	$('.validate').click(function(e){
+		e.preventDefault();
+		validate();
+	});
 
 	});

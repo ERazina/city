@@ -69,7 +69,7 @@ h2{
 
 }
 
-.wrapper{
+.wrapper {
 	width: 100%;
 	margin: auto;
 	top: 0;
@@ -78,37 +78,37 @@ h2{
 	padding-left: 10px;
 	box-sizing: border-box;
 
-
-	.border{
+	.border {
 		height: 5px;
 		background-color: $white;
 		margin-top: 26px;
 	}
 
-	.text{
+	.text {
 		color: $white;
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 24px;
 		padding-top: 25px;
 		padding-right: 44px;
+		padding-bottom: 31px;
 	}
 
-	.form{
+	.form {
 		background-color: $white;
 		width: 100%;
 		margin-top: 26px;
 		border-radius: 5px;
-		box-shadow:1px 0px 15px rgba(0, 0, 0, 0.06);
-		-webkit-box-shadow:1px 0px 15px rgba(0, 0, 0, 0.06);
+		box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.06);
+		-webkit-box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.06);
 		padding-bottom: 22px;
 		max-width: 300px;
 		margin: auto;
 
-		form{
+		form {
 			margin-top: 12px;
 
-			input[type=text]{
+			input[type=text] {
 				background-color: $gray;
 				display: block;
 				border-radius: 3px;
@@ -116,7 +116,7 @@ h2{
 				padding: 6px 0 4px 10px;
 				box-sizing: border-box;
 			}
-			input[type=text], select{
+			input[type=text], select {
 				@include sixteen;
 				height: 50px;
 				width: 280px;
@@ -125,10 +125,10 @@ h2{
 				border: 1px solid $darkgray;
 			}
 
-			option{
+			option {
 				color: $darkgray;
 			}
-			input[type=submit]{
+			input[type=submit] {
 				background: linear-gradient(to top, #316489, #4386b9);
 				height: 30px;
 				width: 125px;
@@ -137,26 +137,26 @@ h2{
 				margin-top: 17px;
 				margin-left: 11px;
 			}
-			input[placeholder]{
+			input[placeholder] {
 				color: $darkgray;
 			}
 
-			input[type="checkbox"]{
+			input[type="checkbox"] {
 				margin-top: 17px;
 				margin-left: 12px;
 			}
-			select{
+			select {
 
 			}
 
 		}
 
-		a{
+		a {
 			color: $darkgray;
 			text-decoration: none;
 			padding-left: 48px;
 		}
-		p{
+		p {
 			display: inline-block;
 			padding-left: 10px;
 			color: $darkgray;
@@ -165,77 +165,90 @@ h2{
 
 		}
 	}
-	.post{
-		margin: 20px 0;
-		height: 170px;
+}
+	.posts {
+		background-color: $white;
+		position: relative;
+		margin-bottom: -118px;
+		margin-top: 20px;
+
+		.second-block {
+			display: flex;
+			flex-direction: center;
+			flex-wrap: wrap;
+
+			.post {
+				margin: 10px;
+				height: 170px;
+				width: 100%;
+
+				.overlay {
+					@include overlay;
+				}
+
+				h2 {
+					padding-left: 4px;
+				}
+				&:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4), &:last-child {
+					@include square;
+				}
+				&:first-child {
+					background-image: url('../img/arm.jpg');
+					margin-top: 0;
+				}
+				&:nth-child(2) {
+					background-image: url('../img/NatWest.jpg');
+				}
+				&:nth-child(3) {
+					background-image: url('../img/mastercard.jpg');
+				}
+				&:nth-child(4) {
+					background-image: url('../img/watch.jpg');
+				}
+				&:last-child {
+					background-image: url('../img/books.jpg');
+					z-index: 1000;
+				}
 
 
-		.overlay{
-			@include overlay;
-		}
+				.textblock {
+					position: absolute;
+					top: 0;
+					margin: 10px 13px 17px 20px;
+					&::after {
+						content: "";
+						background-image: url(../img/icon.png);
+						width: 18px;
+						height: 18px;
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
 
+					.post-header {
+						color: $white;
+						font-size: 24px;
+						font-weight: 700;
+						line-height: 24px;
+						padding-top: 0;
+						position: relative;
 
-		h2{
-			padding-left: 4px;
-		}
-		&:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4), &:last-child{
-			@include square;
-		}
-		&:first-child{
-			background-image: url('../img/arm.jpg');
-		}
-		&:nth-child(2){
-			background-image: url('../img/NatWest.jpg');
-		}
-		&:nth-child(3){
-			background-image: url('../img/mastercard.jpg');
-		}
-		&:nth-child(4){
-			background-image: url('../img/watch.jpg');
-		}
-		&:last-child{
-			background-image: url('../img/books.jpg');
-			z-index: 1000;
-		}
+					}
 
-		.textblock{
-			position: absolute;
-			top: 0;
-			margin: 10px 13px 17px 20px;
-			&::after{
-				content: "";
-				background-image: url(../img/icon.png);
-				width: 18px;
-				height: 18px;
-				position: absolute;
-				top: 0;
-				right: 0;
+					.post-text {
+						font-size: 14px;
+						line-height: 18px;
+						color: $white;
+						margin-top: 13px;
+					}
+				}
 			}
 
-			.post-header{
-				color: $white;
-				font-size: 24px;
-				font-weight: 700;
-				line-height: 24px;
-				padding-top: 0;
-				position: relative;
-
-			}
-
-			.post-text{
-				font-size: 14px;
-				line-height: 18px;
-				color: $white;
-				margin-top: 13px;
-			}
 		}
 	}
-}
 
 .posts{
-	background-color: $white;
-	position: relative;
-	margin-bottom: -110px;
+
 }
 
 
@@ -245,7 +258,7 @@ h2{
 	display: flex;
 	flex-direction: column;
 	z-index: 100;
-	position: absolute;
+	position: relative;
 	
 	.desktop{
 		display: none;
@@ -257,8 +270,9 @@ h2{
 		}
 		ul{
 			list-style: none;
-			padding-top: 65px;
+			padding-top: 80px;
 			counter-reset: list 0;
+			margin-bottom: 0;
 
 			li{
 				color: $bluetext;
@@ -266,10 +280,9 @@ h2{
 				font-size: 18px;
 				line-height: 25px;
 				border-bottom: 1px dashed $darkgray;
-				margin-left: 20px;
-				margin-right: 10px;
-				margin-top: 16px;
-				margin-bottom: 20px;
+				position: relative;
+				padding: 15px 0;
+				margin: 0 20px;
 
 				&:before{
 					content: counter(list);
@@ -279,12 +292,18 @@ h2{
 					border-radius: 50%;
 					position: absolute;
 					margin-left: -50px;
-					margin-top: 0;
 					counter-increment: list;
 					color: $white;
 					line-height: 30px;
 					text-align: center;
+					top: 50%;
+					margin-top: -15px;
 
+				}
+
+				&:last-child{
+					border-bottom: 0;
+					margin-bottom: 0;
 				}
 			}
 
@@ -293,32 +312,18 @@ h2{
 }
 
 .definitions{
-	display: flex;
-	flex-direction: row;
 	position: relative;
-	top: 548px;
-	padding: 20px 10px;
+	margin: 20px 20px 23px 10px;
+	border-left: 5px solid $bluetext;
 
-	.border-blue{
-		width: 5px;
-		height: 322px;
-		background-color: $bluetext;
+	p {
+		color: $bluetext;
+		font-size: 18px;
+		font-weight: 400;
+		padding: 8px 0 8px 15px;
 
-	}
-
-	.define{
-		padding-left: 15px;
-
-		p{
-			color: $bluetext;
-			font-size: 18px;
-			font-weight: 400;
-			padding-top: 8px;
-			padding-bottom: 8px;
-
-			sup{
-
-			}
+		sup{
+			margin-right: 10px;
 		}
 	}
 }

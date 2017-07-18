@@ -16,7 +16,7 @@ gulp.task('browser-sync', function() {
 			baseDir: "build"
 		}
 	});
-	gulp.watch('src/pug/*.pug', ['html']);
+	gulp.watch('src/*.html', ['html']);
 	gulp.watch('src/sass/*.scss', ['scss']);
 	gulp.watch('src/js/*.js', ['js']);
 	gulp.watch('src/img/*.*', ['img']);
@@ -27,15 +27,21 @@ gulp.task('clean', function (cb) {
 	cleaner(build, cb);
 });
 
-//JADE
+
+// HTML
 gulp.task('html', function() {
-	gulp.src('src/pug/*.pug')
-		.pipe(plumber())
-		.pipe(pug({
-			pretty: true
-		}))
-		.pipe(gulp.dest('build'));
+	gulp.src('src/*.html')
+	.pipe(gulp.dest('build'))
 });
+//JADE
+// gulp.task('html', function() {
+// 	gulp.src('src/pug/*.pug')
+// 		.pipe(plumber())
+// 		.pipe(pug({
+// 			pretty: true
+// 		}))
+// 		.pipe(gulp.dest('build'));
+// });
 
 // Сжатие javascript
 gulp.task('js', function() {
