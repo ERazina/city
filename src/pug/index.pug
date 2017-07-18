@@ -1,0 +1,120 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Тестовое задание для Citybank
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='css/normalize.css')
+        link(rel='stylesheet', href='css/style.css')
+    body
+        .card
+            .overlay
+                .wrapper
+                    h1 banner header
+                    .border
+                    .text
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                        | do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        | Ut enim ad minim veniam, quis nostrud
+                    .form
+                        h2 request form
+                        form(action='js/script.js')
+                            input#email(type='text', required='', placeholder='Enter your E-Mail')
+                            input#name(type='text', required='', placeholder='Enter your name')
+                            p
+                                select(size='1', name='country', required='')
+                                    option(disabled='', selected='') Select your country
+                                    option(value='Russia') Russia
+                                    option(value='USA') USA
+                                    option(value='Canada') Canada
+                                    option(value='Japan') Japan
+                            input(type='checkbox', checked='checked')
+                            p I agree with Terms & Conditions
+                            input(type='submit', value='Submit', onclick='validate()')
+                            a(href='#', target='_blank') Hyperlink
+        .posts
+            .wrapper.second-block
+                .post
+                    .overlay
+                    .textblock
+                        .header-post
+                            h2.post-header post header 1
+                        .post-text
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .post
+                    .overlay
+                    .textblock
+                        .header-post
+                            h2.post-header post header 2
+                        .post-text
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .post
+                    .overlay
+                    .textblock
+                        .header-post
+                            h2.post-header post header 3
+                        .post-text
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .post
+                    .overlay
+                    .textblock
+                        .header-post
+                            h2.post-header post header 4
+                        .post-text
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .post
+                    .overlay
+                    .textblock
+                        .header-post
+                            h2.post-header post header 5
+                        .post-text
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        .description
+            .desktop
+                img(src='', alt='')
+            .desktop-text
+                h2 Title text
+                ul
+                    li
+                        | Duis aute irure dolor in reprehenderit
+                        sup 1
+                        |  in voluptate velit
+                    li Ullamco laboris nisi ut aliquip ex ea commodo consequat
+                    li Ut enim ad minim veniam, quis nostrud exercitation
+                    li Et dolore magna aliqua
+                    li
+                        | Sed do eiusmod tempor
+                        sup 2
+                        |  incididunt ut labore
+                    li
+                        | Lorem ipsum dolor sit amet
+                        sup 3
+                        |  consectetur adipisicing elit
+        .definitions
+            .border-blue
+            .define
+                p
+                    sup 1
+                    | Reprehenderit - Lorem ipsum
+                    | 		dolor sit amet, consectetur
+                    | 		adipisicing elit, sed do eiusmod
+                    | 		tempor incididunt ut labore
+                p
+                    sup 2
+                    | Tempor - Ut enim ad minim
+                    | 			veniam, quis nostrud exercitation
+                    | 			ullamco laboris nisi ut aliquip ex
+                    | 			ea commodo consequat.
+                p
+                    sup 3
+                    | Amet - Duis aute irure dolor in
+                    | 			reprehenderit in voluptate velit
+                    | 			esse cillum dolore eu fugiat nulla
+                    | 			pariatur.
+        script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+        script(src='js/script.js')
