@@ -82,6 +82,15 @@ h2 {
         background-color: #eee;
         color: #aaa;
         border: 1px solid #aaa; }
+      .wrapper .form form .noErr {
+        border: 1px solid #4488bb; }
+      .wrapper .form form .err {
+        border: 1px solid #bb4444; }
+        .wrapper .form form .err:after {
+          background-image: url(../img/red-hint.png);
+          position: absolute;
+          left: 50%;
+          top: 20px; }
       .wrapper .form form option {
         color: #aaa; }
       .wrapper .form form input[type=submit] {
@@ -162,7 +171,7 @@ h2 {
         margin: 10px 13px 17px 20px; }
         .posts .second-block .post .textblock::after {
           content: "";
-          background-image: url(../img/icon.png);
+          background: url(../img/sprite.png) -6px -3px;
           width: 18px;
           height: 18px;
           position: absolute;

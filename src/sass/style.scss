@@ -3,6 +3,7 @@ $white: #fff;
 $gray: #eee;
 $darkgray: #aaa;
 $bluetext: #4488bb;
+$red: #bb4444;
 
 body{
 	font-family: Arial;
@@ -116,6 +117,7 @@ h2{
 				padding: 6px 0 4px 10px;
 				box-sizing: border-box;
 			}
+
 			input[type=text], select {
 				@include sixteen;
 				height: 50px;
@@ -123,6 +125,21 @@ h2{
 				background-color: $gray;
 				color: $darkgray;
 				border: 1px solid $darkgray;
+			}
+
+			.noErr{
+				border: 1px solid $bluetext;
+			}
+
+			.err{
+				border: 1px solid $red;
+
+				&:after{
+					background-image: url(../img/red-hint.png);
+					position: absolute;
+					left: 50%;
+					top: 20px;
+				}
 			}
 
 			option {
@@ -216,7 +233,7 @@ h2{
 					margin: 10px 13px 17px 20px;
 					&::after {
 						content: "";
-						background-image: url(../img/icon.png);
+						background: url(../img/sprite.png) -6px -3px;
 						width: 18px;
 						height: 18px;
 						position: absolute;
