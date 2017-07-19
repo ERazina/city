@@ -49,19 +49,26 @@
         -webkit-transition: .3s;
         -o-transition: .3s;
         transition: .3s; }
+        body .posts .second-block .post .textblock .post-text {
+          font-size: 14px; }
       body .posts .second-block .post:hover > .textblock {
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0); }
       body .posts .second-block .post:first-child, body .posts .second-block .post:nth-child(2), body .posts .second-block .post:nth-child(3) {
-        width: 30%; }
+        width: 32%; }
+      body .posts .second-block .post:nth-child(2) {
+        margin-left: 0;
+        margin-right: 0; }
       body .posts .second-block .post:nth-child(4), body .posts .second-block .post:last-child {
         -webkit-box-flex: 3;
         -webkit-flex-grow: 3;
         -ms-flex-positive: 3;
         flex-grow: 3;
         width: 45%;
-        z-index: 1000; } }
+        z-index: 1000; }
+      body .posts .second-block .post:nth-child(4) {
+        margin-right: 0; } }
 
 @media screen and (min-width: 1024px) {
   body .wrap {

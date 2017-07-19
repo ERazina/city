@@ -44,8 +44,6 @@ $bluetext: #4488bb;
     }
 
     .posts {
-
-
       .second-block {
         display: flex;
         flex-flow: row;
@@ -59,13 +57,22 @@ $bluetext: #4488bb;
           .textblock{
             transform: translateY(72%);
             transition: .3s;
+
+            .post-text{
+              font-size: 14px;
+            }
           }
           &:hover > .textblock{
             transform: translateY(0);
           }
 
           &:first-child, &:nth-child(2), &:nth-child(3){
-            width: 30%;
+            width: 32%;
+          }
+
+          &:nth-child(2){
+            margin-left: 0;
+            margin-right: 0;
           }
 
 
@@ -73,6 +80,10 @@ $bluetext: #4488bb;
             flex-grow: 3;
             width: 45%;
             z-index: 1000;
+          }
+
+          &:nth-child(4){
+            margin-right: 0;
           }
         }
       }
