@@ -1,41 +1,26 @@
 $(document).ready(function(){
-	function validate(){
+	function validateEmail() {
+
+		var valEmail = $('#email').val();
 		var emailRegexp = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
-		var nameRegexp = /^[a-zA-Zа-яА-Я]+$/;
-		var
-		if()
-		$('#email').val()
 
-		$('input#name, input#email').unbind().blur( function(){
-			var id = $(this).attr('id');
-			var val = $(this).val();
-
-			switch(id){
-				case 'email':
-					var emailRegexp = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
-
-					if( val.match(emailRegexp)){
-						$(this).addClass('noErr');
-					}
-					else{
-						$(this).addClass('err');
-					}
-				case 'name':
-					var nameRegexp = /^[a-zA-Zа-яА-Я]+$/;
-					if(val.match(nameRegexp)){
-						$(this).addClass('noErr');
-					}
-					else{
-						$(this).addClass('err');
-					}
-			}
-
-		});
+		if (valEmail.match(emailRegexp)) {
+			$('#email').removeClass('err').addClass('noErr');
+		} else {
+			$('#email').removeClass('noErr').addClass('err');
+		}
 	}
 
+	function validateCheckbox(){
+
+	}
 	$('.validate').click(function(e){
 		e.preventDefault();
-		validate();
+		validateEmail();
+		validateCheckbox();
 	});
+});
 
-	});
+
+document.querySelector('.validate').classList.add('');
+document.querySelectorAll('li').classList.remove('');
