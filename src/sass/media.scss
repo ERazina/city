@@ -44,6 +44,8 @@ $bluetext: #4488bb;
     }
 
     .posts {
+
+
       .second-block {
         display: flex;
         flex-flow: row;
@@ -52,11 +54,20 @@ $bluetext: #4488bb;
 
         .post {
           margin: 10px;
+          overflow: hidden;
+
+          .textblock{
+            transform: translateY(72%);
+            transition: .3s;
+          }
+          &:hover > .textblock{
+            transform: translateY(0);
+          }
 
           &:first-child, &:nth-child(2), &:nth-child(3){
             width: 30%;
-            min-height: 215px;
           }
+
 
           &:nth-child(4), &:last-child{
             flex-grow: 3;

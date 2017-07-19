@@ -40,10 +40,21 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     body .posts .second-block .post {
-      margin: 10px; }
+      margin: 10px;
+      overflow: hidden; }
+      body .posts .second-block .post .textblock {
+        -webkit-transform: translateY(72%);
+        -ms-transform: translateY(72%);
+        transform: translateY(72%);
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+      body .posts .second-block .post:hover > .textblock {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0); }
       body .posts .second-block .post:first-child, body .posts .second-block .post:nth-child(2), body .posts .second-block .post:nth-child(3) {
-        width: 30%;
-        min-height: 215px; }
+        width: 30%; }
       body .posts .second-block .post:nth-child(4), body .posts .second-block .post:last-child {
         -webkit-box-flex: 3;
         -webkit-flex-grow: 3;

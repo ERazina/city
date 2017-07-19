@@ -1,5 +1,10 @@
 $(document).ready(function(){
 	function validate(){
+		var emailRegexp = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+		var nameRegexp = /^[a-zA-Zа-яА-Я]+$/;
+		var
+		if()
+		$('#email').val()
 
 		$('input#name, input#email').unbind().blur( function(){
 			var id = $(this).attr('id');

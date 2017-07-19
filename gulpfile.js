@@ -23,9 +23,9 @@ gulp.task('browser-sync', function() {
 
 });
 // чистка папки build
-gulp.task('clean', function (cb) {
-	cleaner(build, cb);
-});
+// gulp.task('clean', function (cb) {
+// 	cleaner(build, cb);
+// });
 
 
 // HTML
@@ -80,7 +80,7 @@ gulp.task('scss', function() {
 });
 
 gulp.task('default', function() {
-	gulp.run('clean');
+	// gulp.run('clean');
 	gulp.run('html');
 	gulp.run('img');
 	gulp.run('scss');

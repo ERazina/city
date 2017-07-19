@@ -27,7 +27,6 @@ h2 {
   position: relative;
   width: 100%; }
   .card .overlay {
-    height: 100%;
     width: 100%;
     background-color: rgba(68, 136, 187, 0.5);
     padding-bottom: 20px; }
@@ -141,11 +140,9 @@ h2 {
     .posts .second-block .post {
       margin: 10px;
       height: 170px;
-      width: 100%; }
-      .posts .second-block .post .overlay {
-        height: 100%;
-        width: 100%;
-        background-color: rgba(68, 136, 187, 0.5); }
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
       .posts .second-block .post h2 {
         padding-left: 4px; }
       .posts .second-block .post:first-child, .posts .second-block .post:nth-child(2), .posts .second-block .post:nth-child(3), .posts .second-block .post:nth-child(4), .posts .second-block .post:last-child {
@@ -166,17 +163,20 @@ h2 {
         background-image: url("../img/books.jpg");
         z-index: 1000; }
       .posts .second-block .post .textblock {
-        position: absolute;
-        top: 0;
-        margin: 10px 13px 17px 20px; }
+        width: 100%;
+        background-color: rgba(68, 136, 187, 0.5);
+        height: 100%;
+        padding: 10px 13px 17px 20px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
         .posts .second-block .post .textblock::after {
           content: "";
           background: url(../img/sprite.png) -6px -3px;
           width: 18px;
           height: 18px;
           position: absolute;
-          top: 0;
-          right: 0; }
+          top: 10px;
+          right: 10px; }
         .posts .second-block .post .textblock .post-header {
           color: #fff;
           font-size: 24px;
@@ -244,11 +244,20 @@ h2 {
 .definitions {
   position: relative;
   margin: 20px 20px 23px 10px;
-  border-left: 5px solid #4488bb; }
+  border-left: 5px solid #4488bb;
+  counter-reset: list 0; }
   .definitions p {
     color: #4488bb;
     font-size: 18px;
     font-weight: 400;
-    padding: 8px 0 8px 15px; }
+    padding: 8px 0 8px 30px;
+    position: relative; }
+    .definitions p:before {
+      counter-increment: list;
+      content: counter(list);
+      position: absolute;
+      top: 5px;
+      left: 20px;
+      font-size: 10px; }
     .definitions p sup {
       margin-right: 10px; }
