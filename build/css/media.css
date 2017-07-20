@@ -56,7 +56,7 @@
         -ms-transform: translateY(0);
         transform: translateY(0); }
       body .posts .second-block .post:first-child, body .posts .second-block .post:nth-child(2), body .posts .second-block .post:nth-child(3) {
-        width: 32%; }
+        width: 31%; }
       body .posts .second-block .post:nth-child(2) {
         margin-left: 0;
         margin-right: 0; }
@@ -94,7 +94,7 @@
     body .wrapper.second-block .post {
       margin: 10px; }
       body .wrapper.second-block .post:first-child, body .wrapper.second-block .post:nth-child(2), body .wrapper.second-block .post:nth-child(3) {
-        width: 33%;
+        width: 32%;
         min-height: 170px; }
       body .wrapper.second-block .post:nth-child(4), body .wrapper.second-block .post:last-child {
         width: 50%; } }

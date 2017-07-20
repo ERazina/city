@@ -81,15 +81,17 @@ h2 {
         background-color: #eee;
         color: #aaa;
         border: 1px solid #aaa; }
-      .wrapper .form form .noErr {
-        border: 1px solid #4488bb; }
-      .wrapper .form form .err {
-        border: 1px solid #bb4444; }
-        .wrapper .form form .err:after {
-          background-image: url(../img/red-hint.png);
-          position: absolute;
-          left: 50%;
-          top: 20px; }
+      .wrapper .form form select {
+        -webkit-border-radius: 3px;
+        border-radius: 3px; }
+      .wrapper .form form input.errEmail, .wrapper .form form select.errEmail {
+        border-color: red;
+        color: red;
+        background-color: #eee; }
+      .wrapper .form form input.noErrEmail, .wrapper .form form select.errEmail {
+        border-color: #4488bb;
+        color: #4488bb;
+        background-color: #eee; }
       .wrapper .form form option {
         color: #aaa; }
       .wrapper .form form input[type=submit] {

@@ -64,8 +64,6 @@ h2{
 		padding-bottom: 20px;
 
 	}
-
-
 }
 
 .wrapper {
@@ -107,13 +105,15 @@ h2{
 		form {
 			margin-top: 12px;
 
-			input[type=text] {
+			input[type=text]{
 				background-color: $gray;
 				display: block;
 				border-radius: 3px;
 				margin: 10px;
 				padding: 6px 0 4px 10px;
 				box-sizing: border-box;
+
+
 			}
 
 			input[type=text], select {
@@ -125,20 +125,22 @@ h2{
 				border: 1px solid $darkgray;
 			}
 
-			.noErr{
-				border: 1px solid $bluetext;
+			select{
+				border-radius: 3px;
 			}
 
-			.err{
-				border: 1px solid $red;
-
-				&:after{
-					background-image: url(../img/red-hint.png);
-					position: absolute;
-					left: 50%;
-					top: 20px;
-				}
+			input.errEmail, select.errEmail{
+				border-color: red;
+				color: red;
+				background-color: $gray;
 			}
+
+			input.noErrEmail, select.errEmail{
+				border-color: $bluetext;
+				color: $bluetext;
+				background-color: $gray;
+			}
+
 
 			option {
 				color: $darkgray;
@@ -159,9 +161,6 @@ h2{
 			input[type="checkbox"] {
 				margin-top: 17px;
 				margin-left: 12px;
-			}
-			select {
-
 			}
 
 		}

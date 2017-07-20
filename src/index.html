@@ -24,16 +24,18 @@
 		<div class="form">
 				<h2>request form</h2>
 				<form>
-					<input type="text" id="email" required placeholder="Enter your E-Mail">
+                    <input type="text" id="email" required placeholder="Enter your E-Mail">
+                    <!--или можно сделать так, но так как нужно чтобы еще селект был выбран, поэтому использую js-->
+                    <!--<input type="email" id="email" required placeholder="Enter your E-Mail" pattern="([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])">-->
 					<input type="text" id="name" required placeholder="Enter your name">
-					<p><select size="1" name="country" required>
-						<option disabled selected>Select your country</option>
+					<p><select size="1" id="country" name="country" required>
+						<option disabled value="0" selected>Select your country</option>
 						<option value="Russia">Russia</option>
 						<option value="USA">USA</option>
 						<option value="Canada">Canada</option>
 						<option value="Japan">Japan</option>
 					</select></p>
-					<input type="checkbox" checked="checked"><p>I agree with Terms & Conditions</p>
+					<input type="checkbox" id="checkbox" required checked="checked"><p>I agree with Terms & Conditions</p>
 					<input class="validate" type="submit" value="Submit">
 					<a href="#" target="_blank">Hyperlink</a>
 				</form>
@@ -111,10 +113,6 @@
 		</div>
 	</div>
 </div>
-<script
-		src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
