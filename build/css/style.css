@@ -71,102 +71,61 @@ h2 {
     .wrapper .form form {
       margin-top: 12px;
       position: relative; }
-      .wrapper .form form label {
-        position: absolute;
-        font-size: 10px;
-        color: #aaa; }
-      .wrapper .form form label.red {
-        color: red; }
-      .wrapper .form form label.blue {
-        color: #4488bb; }
-      .wrapper .form form label[for=email] {
-        top: 4px;
-        left: 22px; }
-      .wrapper .form form label[for=name] {
-        top: 64px;
-        left: 22px; }
-      .wrapper .form form input[placeholder] {
-        color: #aaa; }
-      .wrapper .form form input[type=text] {
-        background-color: #eee;
-        display: block;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        margin: 10px;
-        padding: 6px 0 4px 10px;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box; }
-      .wrapper .form form input[type=text], .wrapper .form form select {
-        font-size: 16px;
-        height: 50px;
-        width: 280px;
-        background-color: #eee;
-        color: #aaa;
-        border: 1px solid #aaa; }
-      .wrapper .form form .close-red-first {
-        top: 8px;
-        left: 258px;
-        height: 31px;
-        width: 22px;
-        background-repeat: no-repeat;
-        position: absolute;
-        background: url(../img/sprite.png) -73px 5px;
-        display: none; }
-      .wrapper .form form .close-blue-first {
-        top: 8px;
-        left: 258px;
-        height: 31px;
-        width: 22px;
-        background-repeat: no-repeat;
-        position: absolute;
-        background: url(../img/sprite.png) -52px 5px;
-        display: none; }
-      .wrapper .form form .close-red-second {
-        top: 68px;
-        left: 258px;
-        height: 31px;
-        width: 22px;
-        background-repeat: no-repeat;
-        position: absolute;
-        background: url(../img/sprite.png) -73px 5px;
-        display: none; }
-      .wrapper .form form .close-blue-second {
-        top: 68px;
-        left: 258px;
-        height: 31px;
-        width: 22px;
-        background-repeat: no-repeat;
-        position: absolute;
-        background: url(../img/sprite.png) -52px 5px;
-        display: none; }
-      .wrapper .form form .error-first {
-        position: absolute;
-        background-image: url(../img/red-hint.png);
-        left: 80px;
-        width: 200px;
-        height: 66px;
-        background-repeat: no-repeat;
-        -webkit-background-size: 100% 100%;
-        background-size: 100%;
-        display: none;
-        top: 39px; }
-      .wrapper .form form .error-second {
-        position: absolute;
-        background-image: url(../img/red-hint.png);
-        left: 80px;
-        width: 200px;
-        height: 66px;
-        background-repeat: no-repeat;
-        -webkit-background-size: 100% 100%;
-        background-size: 100%;
-        display: none;
-        top: 99px;
-        z-index: 1000; }
-      .wrapper .form form .error-first span, .wrapper .form form .error-second span {
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        color: #fff; }
+      .wrapper .form form .textfield {
+        position: relative; }
+        .wrapper .form form .textfield .textfield__label {
+          font-size: 10px;
+          position: absolute;
+          top: 5px;
+          left: 15px;
+          color: #aaa; }
+        .wrapper .form form .textfield .textfield__input {
+          background-color: #eee;
+          display: block;
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          margin: 10px;
+          padding: 6px 0 4px 10px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          font-size: 16px;
+          height: 50px;
+          width: 280px;
+          background-color: #eee;
+          color: #aaa;
+          border: 1px solid #aaa; }
+        .wrapper .form form .textfield .textfield__clear {
+          position: absolute;
+          top: 20px;
+          left: 257px;
+          width: 22px;
+          height: 14px;
+          background-repeat: no-repeat;
+          display: none; }
+          .wrapper .form form .textfield .textfield__clear.red {
+            background: url(../img/sprite.png) -77px 17px; }
+          .wrapper .form form .textfield .textfield__clear.blue {
+            background: url(../img/sprite.png) -52px 17px; }
+        .wrapper .form form .textfield .err {
+          color: white;
+          font-size: 15px;
+          padding: 11px 15px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          background-color: #bb4444;
+          top: 59px;
+          left: 118px;
+          z-index: 1000;
+          display: none; }
+          .wrapper .form form .textfield .err::before {
+            content: '';
+            position: absolute;
+            left: 60px;
+            bottom: 38px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid #bb4444; }
       .wrapper .form form select {
         -webkit-border-radius: 3px;
         border-radius: 3px; }

@@ -25,26 +25,50 @@
 		<div class="form">
 				<h2>request form</h2>
 				<form>
-					<label id="l-email" for="email">Enter your email</label><input type="text" id="email" required placeholder="Enter your E-Mail">
-                    <div class="close-red-first"></div>
-					<div class="close-blue-first"></div>
-					<div class="error-first"></div>
-					<!--или можно сделать так, но так как нужно чтобы еще селект был выбран, поэтому использую js-->
-                    <!--<input type="email" id="email" required placeholder="Enter your E-Mail" pattern="([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])">-->
-					<label id='l-name' for="name">Enter your name</label><input type="text" id="name" required placeholder="Enter your name">
-					<div class="close-red-second"></div>
-					<div class="close-blue-second"></div>
-					<div class="error-second"></div>
-					<p><select size="1" id="country" name="country" value="0" required>
-						<option disabled data-display="Select" value="0" selected>Select your country</option>
-						<option value="1">Russia</option>
-						<option value="2">USA</option>
-						<option value="3">Canada</option>
-						<option value="4">Japan</option>
-					</select></p>
+					<div class="textfield">
+						<label id="email" class="textfield__label">Enter your Email</label>
+						<input type="text" required class="textfield__input" id="email">
+						<div class="textfield__clear red"></div>
+						<div class="err">Enter correct E-Mail</div>
+					</div>
+					<div class="textfield">
+						<label id="name" class="textfield__label">Enter yor name</label>
+						<input type="text" class="textfield__input" id="name">
+						<div class="textfield__clear blue"></div>
+						<div class="err">Enter correct name</div>
+					</div>
+					<p>
+						<select size="1" id="country" name="country" value="0" required>
+							<option disabled data-display="Select" value="0" selected>Select your country</option>
+							<option value="1">Russia</option>
+							<option value="2">USA</option>
+							<option value="3">Canada</option>
+							<option value="4">Japan</option>
+						</select>
+					</p>
 					<input type="checkbox" id="checkbox" required checked="checked"><p>I agree with Terms & Conditions</p>
 					<input class="validate" type="submit" value="Submit">
 					<a href="#" target="_blank">Hyperlink</a>
+					<!--<label id="l-email" for="email">Enter your email</label><input type="text" id="email" required placeholder="Enter your E-Mail">-->
+                    <!--<div class="close-red-first"></div>-->
+					<!--<div class="close-blue-first"></div>-->
+					<!--<div class="error-first"></div>-->
+					<!--&lt;!&ndash;или можно сделать так, но так как нужно чтобы еще селект был выбран, поэтому использую js&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="email" id="email" required placeholder="Enter your E-Mail" pattern="([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])">&ndash;&gt;-->
+					<!--<label id='l-name' for="name">Enter your name</label><input type="text" id="name" required placeholder="Enter your name">-->
+					<!--<div class="close-red-second"></div>-->
+					<!--<div class="close-blue-second"></div>-->
+					<!--<div class="error-second"></div>-->
+					<!--<p><select size="1" id="country" name="country" value="0" required>-->
+						<!--<option disabled data-display="Select" value="0" selected>Select your country</option>-->
+						<!--<option value="1">Russia</option>-->
+						<!--<option value="2">USA</option>-->
+						<!--<option value="3">Canada</option>-->
+						<!--<option value="4">Japan</option>-->
+					<!--</select></p>-->
+					<!--<input type="checkbox" id="checkbox" required checked="checked"><p>I agree with Terms & Conditions</p>-->
+					<!--<input class="validate" type="submit" value="Submit">-->
+					<!--<a href="#" target="_blank">Hyperlink</a>-->
 				</form>
 			</div>
 		</div>

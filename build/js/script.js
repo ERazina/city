@@ -3,20 +3,19 @@
 $(document).ready(function(){
 
 	function validateEmail(){
-		let val = document.querySelector('#email').value;
+		let val = document.querySelector('input#email').value;
 		let regexp = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
 		let email = document.querySelector('#email');
-		let label = document.querySelector('#l-email');
+		let label = document.querySelector('#email');
 
 		if(val.match(regexp)){
-			email.classList.add('noErrEmail');
+			email.classList.add('err');
 			email.classList.remove('errEmail');
 			label.classList.add('blue');
 			label.classList.remove('red');
 			//начала торопиться поэтому использовала jquery
-			$('.close-blue-first').show();
-			$('.close-red-first').hide();
-			$('.error-first').hide();
+			$('.blue').show();
+			$('.red').hide();
 
 		}
 		else{
@@ -24,9 +23,10 @@ $(document).ready(function(){
 			email.classList.remove('noErrEmail');
 			label.classList.add('red');
 			label.classList.remove('blue');
-			$('.close-red-first').show();
-			$('.close-blue-first').hide();
-			$('.error-first').show().append('<span>Enter correct Email</span>');
+			$('.err').show();
+			$('.red').show();
+			// $('.err').hide();
+			// $('.error-first').show().append('<span>Enter correct Email</span>');
 		}
 	}
 
@@ -52,7 +52,7 @@ $(document).ready(function(){
 			label.classList.remove('blue');
 			$('.close-red-second').show();
 			$('.close-blue-second').hide();
-			$('.error-second').show().append('<span>Enter correct name</span>');
+			// $('.error-second').show().append('<span>Enter correct name</span>');
 		}
 	}
 

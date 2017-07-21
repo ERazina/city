@@ -139,96 +139,73 @@ h2{
 			margin-top: 12px;
 			position: relative;
 
-			label{
-				position: absolute;
-				font-size: 10px;
-				color: $darkgray;
-			}
-
-			label.red{
-				color: red;
-			}
-
-			label.blue{
-				color: $bluetext;
-			}
-
-			label[for=email]{
-				top: 4px;
-				left: 22px;
-			}
-
-			label[for=name]{
-				top: 64px;
-				left: 22px;
-			}
-			input[placeholder] {
-				color: $darkgray;
-			}
-
-			input[type=text]{
-				background-color: $gray;
-				display: block;
-				border-radius: 3px;
-				margin: 10px;
-				padding: 6px 0 4px 10px;
-				box-sizing: border-box;
+			.textfield{
+				position: relative;
 
 
-			}
-
-			input[type=text], select {
-				@include sixteen;
-				height: 50px;
-				width: 280px;
-				background-color: $gray;
-				color: $darkgray;
-				border: 1px solid $darkgray;
-			}
-
-			.close-red-first{
-				@include close;
-				background: url(../img/sprite.png) -73px 5px;
-				display: none;
-			}
-
-			.close-blue-first{
-				@include close;
-				background: url(../img/sprite.png) -52px 5px;
-				display: none;
-			}
-
-			.close-red-second{
-				@include close-second;
-				background: url(../img/sprite.png) -73px 5px;
-				display: none;
-
-			}
-
-
-			.close-blue-second{
-				@include close-second;
-				background: url(../img/sprite.png) -52px 5px;
-				display: none;
-
-			}
-			.error-first{
-				@include error;
-				top: 39px;
-			}
-
-			.error-second{
-				@include error;
-				top: 99px;
-				z-index: 1000;
-			}
-
-			.error-first, .error-second{
-				span{
+				.textfield__label{
+					font-size: 10px;
 					position: absolute;
-					top: 30px;
-					left: 30px;
-					color: $white;
+					top: 5px;
+					left: 15px;
+					color: $darkgray;
+
+				}
+
+				.textfield__input{
+					background-color: $gray;
+					display: block;
+					border-radius: 3px;
+					margin: 10px;
+					padding: 6px 0 4px 10px;
+					box-sizing: border-box;
+					@include sixteen;
+					height: 50px;
+					width: 280px;
+					background-color: $gray;
+					color: $darkgray;
+					border: 1px solid $darkgray;
+				}
+
+				.textfield__clear{
+					position: absolute;
+					top: 20px;
+					left: 257px;
+					width: 22px;
+					height: 14px;
+					background-repeat: no-repeat;
+					display: none;
+
+					&.red{
+						background: url(../img/sprite.png) -77px 17px;
+					}
+
+					&.blue{
+						background: url(../img/sprite.png) -52px 17px;
+					}
+				}
+
+				.err{
+					color: white;
+					font-size: 15px;
+					padding: 11px 15px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: block;
+					background-color: $red;
+					top: 59px;
+					left: 118px;
+					z-index: 1000;
+					display: none;
+
+					&::before{
+						content: '';
+						position: absolute;
+						left: 60px; bottom: 38px;
+						border: 10px solid transparent;
+						border-bottom: 10px solid $red;
+					}
 				}
 			}
 
@@ -257,7 +234,6 @@ h2{
 					position: absolute;
 					top: 50%;
 					margin-top: -14px;
-
 				}
 
 				ul{
@@ -277,8 +253,6 @@ h2{
 				margin-left: -10px;
 				line-height: 50px;
 			}
-
-
 
 			input.errEmail, select.errEmail{
 				border-color: red;
