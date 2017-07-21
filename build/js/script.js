@@ -1,38 +1,50 @@
 //на js
-function validateEmail(){
-	let valEmail = document.querySelector('#email').value;
-	let emailRegexp = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
-	let email = document.querySelector('#email');
+'use strict';
 
-	if(valEmail.match(emailRegexp)){
+function validateEmail(){
+	let val = document.querySelector('#email').value;
+	let regexp = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+	let email = document.querySelector('#email');
+	let label = document.querySelector('#l-email');
+
+	if(val.match(regexp)){
 		email.classList.add('noErrEmail');
 		email.classList.remove('errEmail');
+		label.classList.add('blue');
+		label.classList.remove('red');
 	}
 	else{
 		email.classList.add('errEmail');
 		email.classList.remove('noErrEmail');
+		label.classList.add('red');
+		label.classList.remove('blue');
 	}
 }
 
 function validateName(){
-	let valName = document.querySelector('#name').value;
-	let nameRegexp = /^[a-zA-Zа-яА-Я]+$/;
+	let val = document.querySelector('#name').value;
+	let regexp = /^[a-zA-Zа-яА-Я]+$/;
 	let name = document.querySelector('#name');
+	let label = document.querySelector('#l-name');
 
-	if(valName.match(nameRegexp)){
+	if(val.match(regexp)){
 		name.classList.add('noErrEmail');
 		name.classList.remove('errEmail');
+		label.classList.add('blue');
+		label.classList.remove('red');
 	}
 	else{
 		name.classList.add('errEmail');
 		name.classList.remove('noErrEmail');
+		label.classList.add('red');
+		label.classList.remove('blue');
 	}
 }
 
 function validateSelect(){
 	let coutry = document.querySelector('#country');
-	let valCountry = country.value;
-	 if(valCountry === 0){
+	let val = country.value;
+	 if(val === 0){
 	 	country.classList.add('errEmail');
 	 	country.classList.remove('noErrEmail');
 	 }
@@ -45,9 +57,9 @@ function validateSelect(){
 function validateCheckbox(){
 	let checkbox = document.querySelector('#checkbox');
 	let attr = checkbox.hasAttribute('checked');
-	let valCheckbox = attr.value;
+	let val = attr.value;
 
-	if(valCheckbox === null){
+	if(val === null){
 		checkbox.classList.add('err');
 		checkbox.classList.remove('noErr');
 	}
@@ -65,6 +77,14 @@ document.querySelector('.validate').onclick = function(e){
 	validateCheckbox();
 
 }
+
+
+$(document).ready(function() {
+	$('select').niceSelect();
+	$('select').niceSelect('update');
+	$('.nice-select').find('.current').text('Select your country').addClass('customize');
+});
+
 
 // на jquery было бы так, но по сути jq нам здесь нужно только для простого обращения к элементам, а jq замедляет работу, поэтому решила использовать нативный js
 // $(document).ready(function(){

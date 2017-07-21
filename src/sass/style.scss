@@ -65,7 +65,11 @@ h2{
 
 	}
 }
-
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
 .wrapper {
 	width: 100%;
 	margin: auto;
@@ -104,6 +108,34 @@ h2{
 
 		form {
 			margin-top: 12px;
+			position: relative;
+
+			label{
+				position: absolute;
+				font-size: 10px;
+				color: $darkgray;
+			}
+
+			label.red{
+				color: red;
+			}
+
+			label.blue{
+				color: $bluetext;
+			}
+
+			label[for=email]{
+				top: 4px;
+				left: 22px;
+			}
+
+			label[for=name]{
+				top: 64px;
+				left: 22px;
+			}
+			input[placeholder] {
+				color: $darkgray;
+			}
 
 			input[type=text]{
 				background-color: $gray;
@@ -129,6 +161,48 @@ h2{
 				border-radius: 3px;
 			}
 
+			.nice-select{
+				width: 280px;
+				border-radius: 3px;
+				background-color: $gray;
+				color: $darkgray;
+				border: 1px solid $darkgray;
+				position: relative;
+
+				&::after{
+					content: '';
+					width: 33px;
+					height: 21px;
+					background: url(../img/sprite.png) -19px 3px;
+					background-repeat: no-repeat;
+					border-bottom: 0;
+					border-right: 0;
+					transform: rotate(0deg);
+					position: absolute;
+					top: 50%;
+					margin-top: -14px;
+
+				}
+
+				ul{
+					width: 100%;
+					position: absolute;
+					z-index: 1000;
+				}
+			}
+
+			.open{
+				z-index: 1000;
+			}
+
+			.customize{
+				color: #aaa;
+				font-size: 16px;
+				margin-left: -10px;
+			}
+
+
+
 			input.errEmail, select.errEmail{
 				border-color: red;
 				color: red;
@@ -139,8 +213,12 @@ h2{
 				border-color: $bluetext;
 				color: $bluetext;
 				background-color: $gray;
+
 			}
 
+			input.errEmail:invalid{
+				color: red;
+			}
 
 			option {
 				color: $darkgray;
@@ -153,9 +231,6 @@ h2{
 				color: $white;
 				margin-top: 17px;
 				margin-left: 11px;
-			}
-			input[placeholder] {
-				color: $darkgray;
 			}
 
 			input[type="checkbox"] {

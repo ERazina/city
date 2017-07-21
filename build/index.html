@@ -7,11 +7,12 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/nice-select.css">
 </head>
 <body>
 <div class="card">
 	<div class="overlay">
-	<div class="wrapper wrap">
+	<div class="wrapper wrap clearfix">
 		<div class="banner-text">
 			<span class="header"><h1>banner header</h1></span>
 			<div class="border"></div>
@@ -24,12 +25,12 @@
 		<div class="form">
 				<h2>request form</h2>
 				<form>
-                    <input type="text" id="email" required placeholder="Enter your E-Mail">
+					<label id="l-email" for="email">Enter your email</label><input type="text" id="email" required placeholder="Enter your E-Mail">
                     <!--или можно сделать так, но так как нужно чтобы еще селект был выбран, поэтому использую js-->
                     <!--<input type="email" id="email" required placeholder="Enter your E-Mail" pattern="([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])">-->
-					<input type="text" id="name" required placeholder="Enter your name">
+					<label id='l-name' for="name">Enter your name</label><input type="text" id="name" required placeholder="Enter your name">
 					<p><select size="1" id="country" name="country" required>
-						<option disabled value="0" selected>Select your country</option>
+						<option disabled data-display="Select" value="0" selected>Select your country</option>
 						<option value="Russia">Russia</option>
 						<option value="USA">USA</option>
 						<option value="Canada">Canada</option>
@@ -113,6 +114,11 @@
 		</div>
 	</div>
 </div>
+<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+<script src="js/jquery.nice-select.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

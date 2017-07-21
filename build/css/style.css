@@ -31,6 +31,11 @@ h2 {
     background-color: rgba(68, 136, 187, 0.5);
     padding-bottom: 20px; }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .wrapper {
   width: 100%;
   margin: auto;
@@ -64,7 +69,24 @@ h2 {
     max-width: 300px;
     margin: auto; }
     .wrapper .form form {
-      margin-top: 12px; }
+      margin-top: 12px;
+      position: relative; }
+      .wrapper .form form label {
+        position: absolute;
+        font-size: 10px;
+        color: #aaa; }
+      .wrapper .form form label.red {
+        color: red; }
+      .wrapper .form form label.blue {
+        color: #4488bb; }
+      .wrapper .form form label[for=email] {
+        top: 4px;
+        left: 22px; }
+      .wrapper .form form label[for=name] {
+        top: 64px;
+        left: 22px; }
+      .wrapper .form form input[placeholder] {
+        color: #aaa; }
       .wrapper .form form input[type=text] {
         background-color: #eee;
         display: block;
@@ -84,6 +106,38 @@ h2 {
       .wrapper .form form select {
         -webkit-border-radius: 3px;
         border-radius: 3px; }
+      .wrapper .form form .nice-select {
+        width: 280px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        background-color: #eee;
+        color: #aaa;
+        border: 1px solid #aaa;
+        position: relative; }
+        .wrapper .form form .nice-select::after {
+          content: '';
+          width: 33px;
+          height: 21px;
+          background: url(../img/sprite.png) -19px 3px;
+          background-repeat: no-repeat;
+          border-bottom: 0;
+          border-right: 0;
+          -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+          position: absolute;
+          top: 50%;
+          margin-top: -14px; }
+        .wrapper .form form .nice-select ul {
+          width: 100%;
+          position: absolute;
+          z-index: 1000; }
+      .wrapper .form form .open {
+        z-index: 1000; }
+      .wrapper .form form .customize {
+        color: #aaa;
+        font-size: 16px;
+        margin-left: -10px; }
       .wrapper .form form input.errEmail, .wrapper .form form select.errEmail {
         border-color: red;
         color: red;
@@ -92,6 +146,8 @@ h2 {
         border-color: #4488bb;
         color: #4488bb;
         background-color: #eee; }
+      .wrapper .form form input.errEmail:invalid {
+        color: red; }
       .wrapper .form form option {
         color: #aaa; }
       .wrapper .form form input[type=submit] {
@@ -105,8 +161,6 @@ h2 {
         color: #fff;
         margin-top: 17px;
         margin-left: 11px; }
-      .wrapper .form form input[placeholder] {
-        color: #aaa; }
       .wrapper .form form input[type="checkbox"] {
         margin-top: 17px;
         margin-left: 12px; }

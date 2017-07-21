@@ -2,7 +2,6 @@
   body .card {
     background-image: url("../img/big-card.jpg"); }
   body .wrapper {
-    overflow: auto;
     padding-top: 30px; }
     body .wrapper .banner-text {
       width: 50%;
