@@ -48,7 +48,7 @@ body{
 	background-image: url(../img/red-hint.png);
 	left: 80px;
 	width: 200px;
-	height: 152px;
+	height: 66px;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	display: none;
@@ -220,7 +220,7 @@ h2{
 			.error-second{
 				@include error;
 				top: 99px;
-				z-index: 10000;
+				z-index: 1000;
 			}
 
 			.error-first, .error-second{

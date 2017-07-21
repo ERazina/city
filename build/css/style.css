@@ -144,7 +144,7 @@ h2 {
         background-image: url(../img/red-hint.png);
         left: 80px;
         width: 200px;
-        height: 152px;
+        height: 66px;
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100%;
@@ -155,13 +155,13 @@ h2 {
         background-image: url(../img/red-hint.png);
         left: 80px;
         width: 200px;
-        height: 152px;
+        height: 66px;
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100%;
         display: none;
         top: 99px;
-        z-index: 10000; }
+        z-index: 1000; }
       .wrapper .form form .error-first span, .wrapper .form form .error-second span {
         position: absolute;
         top: 30px;
