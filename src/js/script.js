@@ -1,5 +1,7 @@
 //на js
 'use strict';
+$(document).ready(function(){
+
 
 function validateEmail(){
 	let val = document.querySelector('#email').value;
@@ -12,12 +14,20 @@ function validateEmail(){
 		email.classList.remove('errEmail');
 		label.classList.add('blue');
 		label.classList.remove('red');
+		//начала торопиться поэтому использовала jquery
+		$('.close-blue-first').show();
+		$('.close-red-first').hide();
+		$('.error-first').hide();
+
 	}
 	else{
 		email.classList.add('errEmail');
 		email.classList.remove('noErrEmail');
 		label.classList.add('red');
 		label.classList.remove('blue');
+		$('.close-red-first').show();
+		$('.close-blue-first').hide();
+		$('.error-first').show().append('<span>Enter correct Email</span>');
 	}
 }
 
@@ -32,12 +42,18 @@ function validateName(){
 		name.classList.remove('errEmail');
 		label.classList.add('blue');
 		label.classList.remove('red');
+		$('.close-blue-second').show();
+		$('.close-red-second').hide();
+		$('.error-second').hide();
 	}
 	else{
 		name.classList.add('errEmail');
 		name.classList.remove('noErrEmail');
 		label.classList.add('red');
 		label.classList.remove('blue');
+		$('.close-red-second').show();
+		$('.close-blue-second').hide();
+		$('.error-second').show().append('<span>Enter correct name</span>');
 	}
 }
 
@@ -79,10 +95,29 @@ document.querySelector('.validate').onclick = function(e){
 }
 
 
+});
 $(document).ready(function() {
 	$('select').niceSelect();
 	$('select').niceSelect('update');
 	$('.nice-select').find('.current').text('Select your country').addClass('customize');
+
+
+	//очистка инпута
+	$('.close-red-first').click(function(){
+		$('#email').val('');
+		$('.error-first').hide();
+	});
+	$('.close-blue-first').click(function(){
+		$('#email').val('');
+	});
+
+	$('.close-red-second').click(function(){
+		$('#name').val('');
+		$('.error-second').hide();
+	});
+	$('.close-blue-second').click(function(){
+		$('#name').val('');
+	});
 });
 
 

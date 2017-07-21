@@ -103,6 +103,70 @@ h2 {
         background-color: #eee;
         color: #aaa;
         border: 1px solid #aaa; }
+      .wrapper .form form .close-red-first {
+        top: 8px;
+        left: 258px;
+        height: 31px;
+        width: 22px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background: url(../img/sprite.png) -73px 5px;
+        display: none; }
+      .wrapper .form form .close-blue-first {
+        top: 8px;
+        left: 258px;
+        height: 31px;
+        width: 22px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background: url(../img/sprite.png) -52px 5px;
+        display: none; }
+      .wrapper .form form .close-red-second {
+        top: 68px;
+        left: 258px;
+        height: 31px;
+        width: 22px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background: url(../img/sprite.png) -73px 5px;
+        display: none; }
+      .wrapper .form form .close-blue-second {
+        top: 68px;
+        left: 258px;
+        height: 31px;
+        width: 22px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background: url(../img/sprite.png) -52px 5px;
+        display: none; }
+      .wrapper .form form .error-first {
+        position: absolute;
+        background-image: url(../img/red-hint.png);
+        left: 80px;
+        width: 200px;
+        height: 152px;
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100%;
+        display: none;
+        top: 39px; }
+      .wrapper .form form .error-second {
+        position: absolute;
+        background-image: url(../img/red-hint.png);
+        left: 80px;
+        width: 200px;
+        height: 152px;
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100%;
+        display: none;
+        top: 99px;
+        z-index: 10000; }
+      .wrapper .form form .error-first span, .wrapper .form form .error-second span {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #fff; }
       .wrapper .form form select {
         -webkit-border-radius: 3px;
         border-radius: 3px; }
@@ -113,7 +177,8 @@ h2 {
         background-color: #eee;
         color: #aaa;
         border: 1px solid #aaa;
-        position: relative; }
+        position: relative;
+        height: 50px; }
         .wrapper .form form .nice-select::after {
           content: '';
           width: 33px;
@@ -137,7 +202,8 @@ h2 {
       .wrapper .form form .customize {
         color: #aaa;
         font-size: 16px;
-        margin-left: -10px; }
+        margin-left: -10px;
+        line-height: 50px; }
       .wrapper .form form input.errEmail, .wrapper .form form select.errEmail {
         border-color: red;
         color: red;

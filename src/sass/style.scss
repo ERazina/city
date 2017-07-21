@@ -25,6 +25,35 @@ body{
 	background-color: rgba(68, 136, 187, .5);
 }
 
+@mixin close{
+	top: 8px;
+	left: 258px;
+	height: 31px;
+	width: 22px;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+@mixin close-second{
+	top: 68px;
+	left: 258px;
+	height: 31px;
+	width: 22px;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+@mixin error{
+	position: absolute;
+	background-image: url(../img/red-hint.png);
+	left: 80px;
+	width: 200px;
+	height: 152px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: none;
+}
+
 
 
 h1{
@@ -157,6 +186,52 @@ h2{
 				border: 1px solid $darkgray;
 			}
 
+			.close-red-first{
+				@include close;
+				background: url(../img/sprite.png) -73px 5px;
+				display: none;
+			}
+
+			.close-blue-first{
+				@include close;
+				background: url(../img/sprite.png) -52px 5px;
+				display: none;
+			}
+
+			.close-red-second{
+				@include close-second;
+				background: url(../img/sprite.png) -73px 5px;
+				display: none;
+
+			}
+
+
+			.close-blue-second{
+				@include close-second;
+				background: url(../img/sprite.png) -52px 5px;
+				display: none;
+
+			}
+			.error-first{
+				@include error;
+				top: 39px;
+			}
+
+			.error-second{
+				@include error;
+				top: 99px;
+				z-index: 10000;
+			}
+
+			.error-first, .error-second{
+				span{
+					position: absolute;
+					top: 30px;
+					left: 30px;
+					color: $white;
+				}
+			}
+
 			select{
 				border-radius: 3px;
 			}
@@ -168,6 +243,7 @@ h2{
 				color: $darkgray;
 				border: 1px solid $darkgray;
 				position: relative;
+				height: 50px;
 
 				&::after{
 					content: '';
@@ -199,6 +275,7 @@ h2{
 				color: #aaa;
 				font-size: 16px;
 				margin-left: -10px;
+				line-height: 50px;
 			}
 
 
